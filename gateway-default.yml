@@ -8,15 +8,3 @@ spring:
             - Path=/pharmacy/**
           filters:
             - StripPrefix=1
-
-management:
-  endpoints.web.exposure.include=*
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${SERVICE_DISCOVERY_HOST:#{'http://localhost:8761'}}/eureka/
-
-logging:
-  level:
-    org.springframework.cloud.gateway: TRACE
